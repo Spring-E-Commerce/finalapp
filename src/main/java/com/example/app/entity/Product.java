@@ -16,8 +16,30 @@ public class Product {
     private float price;
     private String description;
     private int quantity;
+    private int categoryId;
+
+    @ManyToOne
+    @JoinColumn(name = "categoryId")
+    private Category category;
+
 
     public Product() {
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public int getId() {

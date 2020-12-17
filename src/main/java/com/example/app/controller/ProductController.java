@@ -1,6 +1,7 @@
 package com.example.app.controller;
 
 import com.example.app.entity.Product;
+import com.example.app.service.CategoryService;
 import com.example.app.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -17,16 +18,26 @@ public class ProductController {
     @Autowired
     ProductService productService ;
 
+    @Autowired
+    CategoryService categoryService;
+
     @RequestMapping("/")
     public String getList(Model model){
         model.addAttribute("product" , productService.getList());
+        model.addAttribute("category" , categoryService.getCategory());
         return "index";
+
     }
 
     @RequestMapping("/admin")
     public String admin(Model model){
         model.addAttribute("admin_P" , productService.getList());
         return "admin" ;
+    }
+    @RequestMapping("/shop")
+    public String shop(Model model){
+        model.addAttribute("product" , productService.getList());
+        return "shop";
     }
     @RequestMapping("/addForm")
     public String form(Model model){

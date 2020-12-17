@@ -225,6 +225,7 @@
                                     <td>${p.price}</td>
                                     <td>${p.description}</td>
                                     <td>${p.quantity}</td>
+                                    <td>${p.categoryId}</td>
                                     <td><a href="update?id=${p.id}"
                                            class="btn btn-warning"><i class="far fa-edit"></i></a></td>
                                     <td><a class="btn btn-danger"

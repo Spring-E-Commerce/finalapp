@@ -54,11 +54,15 @@
                     <form:input type="text" class="input" path="quantity" />
                 </div>
                 <div class="inputfield">
+                    <label>CategoryID</label>
+                    <form:input type="text" class="input" path="categoryId" />
+                </div>
+                <div class="inputfield">
                     <label>Image</label>
                     <form:input type="text" class="input" path="image" />
                 </div>
                 <div class="inputfield">
-                    <input type="submit" value="Register" class="btn">
+                    <input type="submit" value="Save" class="btn">
                 </div>
             </div>
         </div>

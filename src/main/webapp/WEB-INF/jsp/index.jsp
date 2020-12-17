@@ -11,9 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Tag  -->
-    <title>CP Computer</title>
+    <title>CHC Computer</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="<c:url value="../../images/favicon.png" />">
     <!-- Web Font -->
     <link
             href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
@@ -92,11 +92,11 @@
                         <div class="search-bar">
                             <select>
                                 <option selected="selected">All Category</option>
-                                <option>CPU</option>
-                                <option>VGA</option>
-                                <option>RAM</option>
-                                <option>Main Board</option>
-                                <option>PSU</option>
+                                <option></option>
+                                <c:forEach var="c" items="${category}">
+                                    <option value="${c.id}" label="--select--">${c.name}</option>
+                                </c:forEach>
+
                             </select>
                             <form>
                                 <input name="search" placeholder="Search Products Here....." type="search">
@@ -260,7 +260,7 @@
                                             <li><a href="#">Shop<i class="ti-angle-down"></i><span
                                                     class="new">New</span></a>
                                                 <ul class="dropdown">
-                                                    <li><a href="shop-grid.html">Shop Grid</a></li>
+                                                    <li><a href="shop">Shop Grid</a></li>
                                                     <li><a href="cart.html">Cart</a></li>
                                                     <li><a href="checkout.html">Checkout</a></li>
                                                 </ul>
