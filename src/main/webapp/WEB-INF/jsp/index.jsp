@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Tag  -->
-    <title>CHC Computer</title>
+    <title>CP Computer</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="<c:url value="../../images/favicon.png" />">
     <!-- Web Font -->
@@ -92,9 +92,8 @@
                         <div class="search-bar">
                             <select>
                                 <option selected="selected">All Category</option>
-                                <option></option>
                                 <c:forEach var="c" items="${category}">
-                                    <option value="${c.id}" label="--select--">${c.name}</option>
+                                    <option>${c.name}</option>
                                 </c:forEach>
 
                             </select>
@@ -413,7 +412,7 @@
                                 <div class="product-content">
                                     <h3><a href="#">${p.name}</a></h3>
                                     <div class="product-price">
-                                        <span class="old">${p.price + 110000} VND</span>
+
                                         <span>${p.price} VND</span>
                                     </div>
                                 </div>
@@ -430,7 +429,7 @@
 <!-- End Product New -->
 
 <!-- Start Product Hot-->
-<div class="product-area most-popular section">
+<div class="product-area most-popular section" style="margin-top: 20px">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -468,7 +467,7 @@
                         <div class="product-content">
                             <h3><a href="product-details.html">${p.name}</a></h3>
                             <div class="product-price">
-                                <span class="old">${p.price + 1235600} VND</span>
+
                                 <span>${p.price} VND</span>
                             </div>
                         </div>

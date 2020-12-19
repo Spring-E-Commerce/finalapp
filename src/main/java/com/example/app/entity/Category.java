@@ -8,22 +8,14 @@ import java.util.List;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
-    private String name;
+    private String name ;
 
     @OneToMany(mappedBy = "category" , fetch = FetchType.EAGER)
-    private List<Product> productList;
-
+    private List<Product> products;
 
     public Category() {
-    }
-
-    public List<Product> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
     }
 
     public int getId() {
@@ -40,5 +32,13 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

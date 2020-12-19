@@ -17,7 +17,9 @@
             rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="<c:url value="../../css/sb-admin-2.min.css" />" rel="stylesheet">
-     <style>
+
+
+    <style>
          .tr1{
              text-align: center;
              color: white;
@@ -192,12 +194,25 @@
                         </div>
                         <div class="col-sm-6">
                             <form action="search" method="post">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="search..." name="keyword">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-success" type="submit"><i class="fas fa-search fa-sm"></i></button>
+                                <div class="search-bar-top">
+                                    <div class="search-bar">
+                                        <form action="search" method="post">
+                                            <div class="input-group mb-3">
+                                                <select name="category_id">
+                                                    <option selected="selected">All Category</option>
+                                                    <c:forEach var="c" items="${category}">
+                                                        <option value="${c.id}">${c.name}</option>
+                                                    </c:forEach>
+                                                </select>
+                                                <input type="text" class="form-control" placeholder="search..." name="keyword">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="submit"><i class="fas fa-search fa-sm"></i></button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     <div class="row">
@@ -212,6 +227,7 @@
                                     <th>Price</th>
                                     <th>Description</th>
                                     <th>Quantity</th>
+                                    <th>Category</th>
                                     <th>Action</th>
                                     <th></th>
                                 </tr>
@@ -225,7 +241,7 @@
                                     <td>${p.price}</td>
                                     <td>${p.description}</td>
                                     <td>${p.quantity}</td>
-                                    <td>${p.categoryId}</td>
+                                    <td>${p.category.name}</td>
                                     <td><a href="update?id=${p.id}"
                                            class="btn btn-warning"><i class="far fa-edit"></i></a></td>
                                     <td><a class="btn btn-danger"

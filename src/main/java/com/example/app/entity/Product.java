@@ -1,6 +1,7 @@
 package com.example.app.entity;
 
 import javax.persistence.*;
+import java.text.DecimalFormat;
 
 
 @Entity
@@ -16,12 +17,11 @@ public class Product {
     private float price;
     private String description;
     private int quantity;
-    private int categoryId;
+
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    private Category category;
-
+    private Category category ;
 
     public Product() {
     }
@@ -34,13 +34,7 @@ public class Product {
         this.category = category;
     }
 
-    public int getCategoryId() {
-        return categoryId;
-    }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
 
     public int getId() {
         return id;
@@ -78,10 +72,13 @@ public class Product {
 
     public float getPrice() {
         return price;
+
     }
 
     public void setPrice(float price) {
-        this.price = price;
+
+
+        this.price = price ;
     }
 
     public String getDescription() {

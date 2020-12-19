@@ -54,12 +54,12 @@
                     <form:input type="text" class="input" path="quantity" />
                 </div>
                 <div class="inputfield">
-                    <label>CategoryID</label>
-                    <form:input type="text" class="input" path="categoryId" />
-                </div>
-                <div class="inputfield">
                     <label>Image</label>
                     <form:input type="text" class="input" path="image" />
+                </div>
+                <div class="inputfield">
+                    <label>Category</label>
+                    <form:select required="true" items="${categoryMap}" class="input" path="category.id"  ></form:select>
                 </div>
                 <div class="inputfield">
                     <input type="submit" value="Save" class="btn">

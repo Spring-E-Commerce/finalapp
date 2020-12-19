@@ -25,11 +25,14 @@ public class ProductService {
     public Product getProduct(int id){
       return   productRepository.findOne(id);
     }
-    public List<Product> search(String keyword){
+    /*public List<Product> search(String keyword){
         if(keyword != null){
             return productRepository.search(keyword);
         }
          return productRepository.findAll();
+    }*/
+    public List<Product> search(int category_id){
+        return productRepository.searchProductByCategory(category_id);
     }
 
 }
