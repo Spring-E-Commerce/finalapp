@@ -53,36 +53,6 @@
 <body class="js">
 <!-- Header -->
 <header class="header shop">
-    <!-- Topbar -->
-
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-12">
-                    <!-- Top Left -->
-                    <div class="top-left">
-                        <ul class="list-main">
-                            <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                            <li><i class="ti-email"></i> support@shophub.com</li>
-                        </ul>
-                    </div>
-                    <!--/ End Top Left -->
-                </div>
-                <div class="col-lg-8 col-md-12 col-12">
-                    <!-- Top Right -->
-                    <div class="right-content">
-                        <ul class="list-main">
-                            <li><i class="ti-location-pin"></i> Store location</li>
-                            <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-                            <li><i class="ti-user"></i> <a href="#">My account</a></li>
-                            <li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Top Right -->
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- End Topbar -->
     <div class="middle-inner">
         <div class="container">
@@ -239,13 +209,11 @@
                     <div class="single-widget category">
                         <h3 class="title">Categories</h3>
                         <ul class="categor-list">
-                            <li><a href="#">Gaming Gear</a></li>
-                            <li><a href="#">CPU</a></li>
-                            <li><a href="#">VGA</a></li>
-                            <li><a href="#">PSU</a></li>
-                            <li><a href="#">RAM</a></li>
-                            <li><a href="#">Mainboard</a></li>
-                            <li><a href="#">Camera</a></li>
+                            <c:forEach var="c" items="${category}">
+                                <li><a href="/category/${c.id}" >${c.name}</a></li>
+                            </c:forEach>
+
+
                         </ul>
                     </div>
                     <!--/ End Single Widget -->

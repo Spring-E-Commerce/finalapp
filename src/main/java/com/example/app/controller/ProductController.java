@@ -42,6 +42,7 @@ public class ProductController {
     @RequestMapping("/shop")
     public String shop(Model model){
         model.addAttribute("product" , productService.getList());
+        model.addAttribute("category" , categoryService.getCategory());
         return "shop";
     }
     @RequestMapping("/addForm")
@@ -87,6 +88,15 @@ public class ProductController {
         model.addAttribute("category" , categories);
 
         return "admin";
+    }
+    @RequestMapping(value = "/category/{category_id}" , method = RequestMethod.GET)
+    public String shop(@PathVariable("category_id") int category_id , Model model){
+        List<Product> products = productService.search(category_id) ;
+        model.addAttribute("product" , products);
+        List<Category> categories = categoryService.getCategory();
+        model.addAttribute("category" , categories);
+
+        return "shop";
     }
     @RequestMapping("/product/{id}")
     public String product(@PathVariable("id") int id , Model model){
