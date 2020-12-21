@@ -1,36 +1,33 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!doctype html>
-<html lang="zxx">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <!-- Meta Tag -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='copyright' content=''>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Tag  -->
-    <title>CHC - ECommerce</title>
+    <title>CP Computer</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="<c:url value="../../images/favicon.png" />">
     <!-- Web Font -->
-    <link href="<c:url value="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap  " /> " rel="stylesheet">
+    <link
+            href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+            rel="stylesheet">
 
     <!-- StyleSheet -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<c:url value="../../css/font-awesome.css" />">
+    <link rel="stylesheet" href="<c:url value="../../css/style.css" />">
     <!-- Bootstrap -->
-    <link href="<c:url value="../../css/bootstrap.css" />" rel="stylesheet">
-
+    <link rel="stylesheet" href="<c:url value="../../css/bootstrap.css" />">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="<c:url value="../../css/magnific-popup.min.css" />">
     <!-- Font Awesome -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="<c:url value="../../css/font-awesome.css" />">
     <!-- Fancybox -->
     <link rel="stylesheet" href="<c:url value="../../css/jquery.fancybox.min.css" />">
     <!-- Themify Icons -->
-    <link rel="stylesheet" href="<c:url value="../../css/themify-icons.css" />">
-    <!-- Jquery Ui -->
-    <link rel="stylesheet" href="<c:url value="../../css/jquery-ui.css" />">
+
     <!-- Nice Select CSS -->
     <link rel="stylesheet" href="<c:url value="../../css/niceselect.css" />">
     <!-- Animate CSS -->
@@ -41,56 +38,28 @@
     <link rel="stylesheet" href="<c:url value="../../css/owl-carousel.css" />">
     <!-- Slicknav -->
     <link rel="stylesheet" href="<c:url value="../../css/slicknav.min.css" />">
-
+    <link rel="stylesheet" href="<c:url value="../../css/themify-icons.css" />">
     <!-- Eshop StyleSheet -->
-    <link rel="stylesheet" href="<c:url value="../../css/reset.css" />" >
+    <link rel="stylesheet" href="<c:url value="../../css/reset.css" />">
     <link rel="stylesheet" href="<c:url value="../../css/style1.css" />">
     <link rel="stylesheet" href="<c:url value="../../css/responsive.css" />">
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body class="js">
-<!-- Header -->
-<header class="header shop">
-    <!-- Topbar -->
 
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-12">
-                    <!-- Top Left -->
-                    <div class="top-left">
-                        <ul class="list-main">
-                            <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                            <li><i class="ti-email"></i> support@shophub.com</li>
-                        </ul>
-                    </div>
-                    <!--/ End Top Left -->
-                </div>
-                <div class="col-lg-8 col-md-12 col-12">
-                    <!-- Top Right -->
-                    <div class="right-content">
-                        <ul class="list-main">
-                            <li><i class="ti-location-pin"></i> Store location</li>
-                            <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-                            <li><i class="ti-user"></i> <a href="#">My account</a></li>
-                            <li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Top Right -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Topbar -->
+<header class="header shop">
     <div class="middle-inner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-12">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/"><img src="../../images/logo.jpg" alt="logo"></a>
+                        <a href="/"><img src="/images/logo.jpg" alt="logo"></a>
                     </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->
@@ -111,13 +80,9 @@
                 <div class="col-lg-8 col-md-7 col-12">
                     <div class="search-bar-top">
                         <div class="search-bar">
-                            <select>
-                                <option selected="selected">All Category</option>
-                                <option>watch</option>
-                            </select>
                             <form>
                                 <input name="search" placeholder="Search Products Here....." type="search">
-                                <button class="btnn"><i class="fas fa-search"></i></button>
+                                <button class="btnn"><i class="ti-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -132,35 +97,8 @@
                             <a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                         </div>
                         <div class="sinlge-bar shopping">
-                            <a href="#" class="single-icon"><i class='fas fa-cart-arrow-down' style='font-size:24px'></i> <span class="total-count">2</span></a>
+                            <a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
                             <!-- Shopping Item -->
-                            <div class="shopping-item">
-                                <div class="dropdown-cart-header">
-                                    <span>2 Items</span>
-                                    <a href="#">View Cart</a>
-                                </div>
-                                <ul class="shopping-list">
-                                    <li>
-                                        <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                        <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-                                        <h4><a href="#">Woman Ring</a></h4>
-                                        <p class="quantity">1x - <span class="amount">$99.00</span></p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                        <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-                                        <h4><a href="#">Woman Necklace</a></h4>
-                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
-                                    </li>
-                                </ul>
-                                <div class="bottom">
-                                    <div class="total">
-                                        <span>Total</span>
-                                        <span class="total-amount">$134.00</span>
-                                    </div>
-                                    <a href="checkout.html" class="btn animate">Checkout</a>
-                                </div>
-                            </div>
                             <!--/ End Shopping Item -->
                         </div>
                     </div>
@@ -183,9 +121,9 @@
                                             <li class="active"><a href="#">Home</a></li>
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Service</a></li>
-                                            <li><a href="#">Shop<i class="fas fa-angle-down"></i><span class="new">New</span></a>
+                                            <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                 <ul class="dropdown">
-                                                    <li><a href="shop-grid.html">Shop Grid</a></li>
+                                                    <li><a href="/shop">Shop Grid</a></li>
                                                     <li><a href="cart.html">Cart</a></li>
                                                     <li><a href="checkout.html">Checkout</a></li>
                                                 </ul>
@@ -219,8 +157,8 @@
             <div class="col-12">
                 <div class="bread-inner">
                     <ul class="bread-list">
-                        <li><a href="/">Home<i class="ti-arrow-right"></i></a></li>
-                        <li class="active"><a href="/shop">Shop Grid</a></li>
+                        <li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+                        <li class="active"><a href="blog-single.html">Cart</a></li>
                     </ul>
                 </div>
             </div>
@@ -229,165 +167,135 @@
 </div>
 <!-- End Breadcrumbs -->
 
-<!-- Product Style -->
-<section class="product-area shop-sidebar shop section">
+<!-- Shopping Cart -->
+<div class="shopping-cart section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-12">
-                <div class="shop-sidebar">
-                    <!-- Single Widget -->
-                    <div class="single-widget category">
-                        <h3 class="title">Categories</h3>
-                        <ul class="categor-list">
-                            <li><a href="#">Gaming Gear</a></li>
-                            <li><a href="#">CPU</a></li>
-                            <li><a href="#">VGA</a></li>
-                            <li><a href="#">PSU</a></li>
-                            <li><a href="#">RAM</a></li>
-                            <li><a href="#">Mainboard</a></li>
-                            <li><a href="#">Camera</a></li>
-                        </ul>
-                    </div>
-                    <!--/ End Single Widget -->
-                    <!-- Shop By Price -->
-                    <div class="single-widget range">
-                        <h3 class="title">Shop by Price</h3>
-                        <div class="price-filter">
-                            <div class="price-filter-inner">
-                                <div id="slider-range"></div>
-                                <div class="price_slider_amount">
-                                    <div class="label-input">
-                                        <span>Range:</span><input type="text" id="amount" name="price" placeholder="Add Your Price"/>
-                                    </div>
-                                </div>
+            <div class="col-12">
+                <!-- Shopping Summery -->
+                <table class="table shopping-summery">
+                    <thead>
+                    <tr class="main-hading">
+                        <th>PRODUCT</th>
+                        <th>NAME</th>
+                        <th class="text-center">UNIT PRICE</th>
+                        <th class="text-center">QUANTITY</th>
+                        <th class="text-center">TOTAL</th>
+                        <th class="text-center"><i class="ti-trash remove-icon"></i></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="p" items="${sessionScope.gioHang.items}">
+                    <tr>
+                        <td class="image" data-title="No"><img src="${p.product.image}" width="100" height="100" alt="#"></td>
+                        <td class="product-des" data-title="Description">
+                            <p class="product-name"><a href="#">${p.product.name}</a></p>
+                            <p class="product-des">${p.product.description}</p>
+                        </td>
+                        <td class="price" data-title="Price"><span>${p.product.price} </span></td>
+                        <td class="qty" data-title="Qty"><!-- Input Order -->
+                            <div class="input-group">
+                                <form action="/cart/update">
+                                    <input type="hidden" value="${p.product.id}" name="id">
+                                    <input type="number" name="qty" class="input-number"  min="1" max="100" value="${p.quantity}">
+                                    <button type="submit" class=" btn-warning" style="margin-right: auto"><i class="far fa-edit"></i></button>
+                                </form>
                             </div>
-                        </div>
-                        <ul class="check-box-list">
-                            <li>
-                                <label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">$20 - $50<span class="count">(3)</span></label>
-                            </li>
-                            <li>
-                                <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">$50 - $100<span class="count">(5)</span></label>
-                            </li>
-                            <li>
-                                <label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">$100 - $250<span class="count">(8)</span></label>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--/ End Shop By Price -->
-                    <!-- Single Widget -->
-                    <div class="single-widget recent-post">
+                            <!--/ End Input Order -->
+                        </td>
+                        <td class="total-amount" data-title="Total"><span>${p.subTotal}</span></td>
 
-                        <!-- Single Post -->
-                        <c:forEach var="p" items="${product}">
-                            <c:if test="${p.title.equals('best')}">
-                        <div class="single-post first">
-                            <div class="image">
-                                <img src="${p.image}" alt="#">
-                            </div>
-                            <div class="content">
-                                <h5><a href="#">${p.name}</a></h5>
-                                <p class="price">${p.price}</p>
-                                <ul class="reviews">
-                                    <li class="yellow"><i class="ti-star"></i></li>
-                                    <li class="yellow"><i class="ti-star"></i></li>
-                                    <li class="yellow"><i class="ti-star"></i></li>
-                                    <li class="yellow"><i class="ti-star"></i></li>
-                                    <li class="yellow"><i class="ti-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                            </c:if>
-                        </c:forEach>
-                        <!-- End Single Post -->
-                    </div>
-                    <!--/ End Single Widget -->
+                        <td class="action" data-title="Remove">
+                            <form action="/cart/remove">
+                                <input type="hidden" value="${p.product.id}" name="id">
+                                <button type="submit" class="btn-danger"><i class="ti-trash remove-icon"></i></button>
+                            </form>
 
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-8 col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Shop Top -->
-                        <div class="shop-top">
-                            <div class="shop-shorter">
-                                <div class="single-shorter">
-                                    <label>Show :</label>
-                                    <select>
-                                        <option selected="selected">09</option>
-                                        <option>15</option>
-                                        <option>25</option>
-                                        <option>30</option>
-                                    </select>
-                                </div>
-                                <div class="single-shorter">
-                                    <label>Sort By :</label>
-                                    <select>
-                                        <option selected="selected">Name</option>
-                                        <option>Price</option>
-                                        <option>Size</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <ul class="view-mode">
-                                <li class="active"><a href="shop-grid.html"><i class="fa fa-th-large"></i></a></li>
-                                <li><a href="shop-list.html"><i class="fa fa-th-list"></i></a></li>
-                            </ul>
-                        </div>
-                        <!--/ End Shop Top -->
-                    </div>
-                </div>
-                <div class="row">
-                    <c:forEach var="p" items="${product}">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-product">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="${p.image}" alt="#">
-                                    <img class="hover-img" src="${p.image}" alt="#">
-                                    <c:if test="${p.title.equals('sale 30')}">
-                                        <span class="price-dec">30% Off</span>
-                                    </c:if>
-                                    <c:if test="${p.title.equals('sale 50')}">
-                                        <span class="price-dec">50% Off</span>
-                                    </c:if>
-                                    <c:if test="${p.title.equals('new')}">
-                                        <span class="new">new</span>
-                                    </c:if>
-                                    <c:if test="${p.title.equals('hot')}">
-                                        <span class="out-of-stock">hot</span>
-                                    </c:if>
-
-                                </a>
-                                <div class="button-head">
-                                    <div class="product-action">
-                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                                        <a title="Wishlist" href="/product/${p.id}"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-                                    </div>
-                                    <form action="/cart/add" method="post">
-                                        <input type="hidden" value="${p.id}" name="id"/>
-                                        <div class="product-action-2">
-                                            <button title="Add to cart" type="submit">Add to cart</button>>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="/product/${p.id}">${p.name}</a></h3>
-                                <div class="product-price">
-                                    <span>${p.price} vnd</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </td>
+                    </tr>
                     </c:forEach>
+                    </tbody>
+                </table>
+                <!--/ End Shopping Summery -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- Total Amount -->
+                <div class="total-amount">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-5 col-12">
+                            <div class="left">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-7 col-12">
+                            <div class="right">
+                                <ul>
+                                    <li>Cart Subtotal<span>${sessionScope.gioHang.total}</span></li>
+                                    <li>Shipping<span>Free</span></li>
+
+                                    <li class="last">You Pay<span>${sessionScope.gioHang.total}</span></li>
+                                </ul>
+                                <div class="button5">
+                                    <a href="#" class="btn">Checkout</a>
+                                    <a href="/shop" class="btn">Continue shopping >></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!--/ End Total Amount -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Shopping Cart -->
+
+<!-- Start Shop Services Area  -->
+<section class="shop-services section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-rocket"></i>
+                    <h4>Free shiping</h4>
+                    <p>Orders over $100</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-reload"></i>
+                    <h4>Free Return</h4>
+                    <p>Within 30 days returns</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-lock"></i>
+                    <h4>Sucure Payment</h4>
+                    <p>100% secure payment</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-tag"></i>
+                    <h4>Best Peice</h4>
+                    <p>Guaranteed price</p>
+                </div>
+                <!-- End Single Service -->
             </div>
         </div>
     </div>
 </section>
-<!--/ End Product Style 1  -->
+<!-- End Shop Newsletter -->
 
 <!-- Start Shop Newsletter  -->
 <section class="shop-newsletter section">
@@ -397,6 +305,7 @@
                 <div class="col-lg-8 offset-lg-2 col-12">
                     <!-- Start Newsletter Inner -->
                     <div class="inner">
+                        <h4>Newsletter</h4>
                         <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
                         <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
                             <input name="EMAIL" placeholder="Your email address" required="" type="email">
@@ -410,6 +319,9 @@
     </div>
 </section>
 <!-- End Shop Newsletter -->
+
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -424,16 +336,16 @@
                         <div class="product-gallery">
                             <div class="quickview-slider-active">
                                 <div class="single-slider">
-                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                    <img src="images/modal1.jpg" alt="#">
                                 </div>
                                 <div class="single-slider">
-                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                    <img src="images/modal2.jpg" alt="#">
                                 </div>
                                 <div class="single-slider">
-                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                    <img src="images/modal3.jpg" alt="#">
                                 </div>
                                 <div class="single-slider">
-                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                    <img src="images/modal4.jpg" alt="#">
                                 </div>
                             </div>
                         </div>
@@ -615,7 +527,6 @@
     </div>
 </footer>
 <!-- /End Footer Area -->
-
 
 <!-- Jquery -->
 <script src="js/jquery.min.js"></script>
