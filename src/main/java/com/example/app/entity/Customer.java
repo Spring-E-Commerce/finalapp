@@ -1,6 +1,9 @@
 package com.example.app.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "customer")
@@ -8,13 +11,23 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int id ;
-    private String fullname;
+    private int id;
+    @Column(name = "full_name")
+    private String fullName ;
     private String email;
-    private int age;
-    private String address;
-    private String username;
-    private String password;
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birthday;
+    @Column(name = "phone_number")
+    private String phoneNumber;
+    private String gender ;
+    private String address ;
+    @Column(name = "brand_logo")
+    private String brandLogo ;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity userEntity ;
 
     public Customer() {
     }
@@ -27,12 +40,12 @@ public class Customer {
         this.id = id;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getEmail() {
@@ -43,12 +56,28 @@ public class Customer {
         this.email = email;
     }
 
-    public int getAge() {
-        return age;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getAddress() {
@@ -59,19 +88,19 @@ public class Customer {
         this.address = address;
     }
 
-    public String getUsername() {
-        return username;
+    public String getBrandLogo() {
+        return brandLogo;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setBrandLogo(String brandLogo) {
+        this.brandLogo = brandLogo;
     }
 
-    public String getPassword() {
-        return password;
+    public UserEntity getUserEntity() {
+        return userEntity;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserEntity(UserEntity userEntity) {
+        this.userEntity = userEntity;
     }
 }

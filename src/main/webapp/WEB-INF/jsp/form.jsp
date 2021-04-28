@@ -9,10 +9,13 @@
     <style type="text/css">
         <%@include file="../../css/Register.css" %>
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="<c:url value="../../css/sb-admin-2.min.css" />" rel="stylesheet">
 </head>
 <body>
 <center>
-    <form:form  method="post" action="add" modelAttribute="product">
+    <form:form  method="post" action="add" modelAttribute="product" enctype="multipart/form-data">
         <div class="wrapper">
             <c:if test="${type.equals('update')}">
                 <div class="title">
@@ -34,7 +37,7 @@
                 </c:if>
                 <div class="inputfield">
                     <label>Name</label>
-                    <form:input type="text" class="input" path="name"/>
+                    <form:input type="text" class="input" path="name" />
                 </div>
                 <div class="inputfield">
                     <label>Title</label>
@@ -55,7 +58,12 @@
                 </div>
                 <div class="inputfield">
                     <label>Image</label>
-                    <form:input type="text" class="input" path="image" />
+                    <input type="file" class="input"  name="fileImage" id="fileImage" accept="image/png , image/jpg" />
+
+                </div>
+                <div class="inputfield">
+                    <label></label>
+                    <img id="thumbnail" alt="review" style="width: 20%">
                 </div>
                 <div class="inputfield">
                     <label>Category</label>
@@ -70,4 +78,21 @@
 </center>
 
 </body>
+<script  type="text/javascript">
+    $(document).ready(function () {
+        $('#fileImage').change(function () {
+             showThumbnailImage(this);
+        })
+    });
+    function showThumbnailImage(fileInput) {
+        file = fileInput.files[0];
+        reader = new FileReader() ;
+
+        reader.onload = function (e) {
+            $('#thumbnail').attr('src' , e.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+
+</script>
 </html>

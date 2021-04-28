@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <base href="${pageContext.servletContext.contextPath}">
     <title>CHC Admin</title>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <!-- Custom fonts for this template-->
@@ -237,7 +237,7 @@
                                 <tr>
                                     <td>${p.name}</td>
                                     <td>${p.title}</td>
-                                    <td><img src="${p.image}"  style="width: 20%" /></td>
+                                    <td><img src="/images/product/${p.image}"  style="width: 20%" /></td>
                                     <td>${p.price}</td>
                                     <td>${p.description}</td>
                                     <td>${p.quantity}</td>
@@ -295,7 +295,8 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.min.js">
+</script>
 <script src="../../js/bootstrap.bundle.min.js"></script>
 
 

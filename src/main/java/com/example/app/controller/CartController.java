@@ -16,6 +16,7 @@ public class CartController {
     @Autowired
     private CartManger cartManger ;
 
+
     @RequestMapping("/add" )
     public String add(HttpSession session , @RequestParam("id") Product product ,
                       @RequestParam(value = "qty" , required = true , defaultValue = "1") int qty)
